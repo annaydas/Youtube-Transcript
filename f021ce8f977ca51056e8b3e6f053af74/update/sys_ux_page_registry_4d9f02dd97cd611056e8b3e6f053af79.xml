@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_page_registry">
+    <sys_ux_page_registry action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <admin_panel>c19f02dd97cd611056e8b3e6f053af77</admin_panel>
+        <admin_panel_table>sys_ux_app_config</admin_panel_table>
+        <auth_routes/>
+        <page/>
+        <parent_app display_value="Unified Navigation app shell">c86a62e2c7022010099a308dc7c26022</parent_app>
+        <path>ytt</path>
+        <root_macroponent display_value="UXR Base Experience Shell">76a83a645b122010b913030a1d81c780</root_macroponent>
+        <sys_class_name>sys_ux_page_registry</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-15 12:47:53</sys_created_on>
+        <sys_id>4d9f02dd97cd611056e8b3e6f053af79</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>YouTube Transcripts</sys_name>
+        <sys_package display_value="YouTube Transcripts" source="x_792082_ytt">f021ce8f977ca51056e8b3e6f053af74</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="YouTube Transcripts">f021ce8f977ca51056e8b3e6f053af74</sys_scope>
+        <sys_update_name>sys_ux_page_registry_4d9f02dd97cd611056e8b3e6f053af79</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-15 12:47:53</sys_updated_on>
+        <title>YouTube Transcripts</title>
+    </sys_ux_page_registry>
+</record_update>

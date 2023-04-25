@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_792082_ytt.YttUtils</api_name>
+        <caller_access>1</caller_access>
+        <client_callable>false</client_callable>
+        <description>This script include contains helper functions to run youtube transcription logic.</description>
+        <name>YttUtils</name>
+        <script><![CDATA[var YttUtils = Class.create();
+YttUtils.prototype = {
+
+    ERROR_MSG: 'Transcript could not be generated. Please check back later.',
+
+    initialize: function() {},
+
+    getPlaylists: function() {
+        var channelGr = new GlideRecord('x_792082_ytt_channel');
+        channelGr.addActiveQuery();
+        channelGr.query();
+        while (channelGr.next()) {
+            this.getPlaylistPerChannelID(
+                channelGr.getValue('channel_id'),
+                channelGr.getUniqueValue()
+            );
+        }
+    },
+
+    getPlaylistPerChannelID: function(channelID, channelSysID, nextPageToken) {
+
+
+        try {
+            var r = new sn_ws.RESTMessageV2('x_792082_ytt.Youtube REST', 'Get Playlists');
+            r.setStringParameterNoEscape('channelId', channelID);
+            if (nextPageToken) {
+                r.setStringParameterNoEscape('nextPageToken', nextPageToken);
+            }
+
+            var response = r.execute();
+            var responseBody = response.getBody();
+            var httpStatus = response.getStatusCode();
+
+            if (httpStatus == 200) {
+                var itemsArr = JSON.parse(responseBody).items;
+                itemsArr.forEach(function(item) {
+                    this.createUpdatePlaylist(item, channelSysID);
+                }, this);
+
+                if (JSON.parse(responseBody).nextPageToken) {
+                    this.getPlaylistPerChannelID(
+                        channelID,
+                        channelSysID,
+                        JSON.parse(responseBody).nextPageToken
+                    );
+                }
+
+            } else {
+                gs.error('oops');
+            }
+        } catch (ex) {
+            var message = ex.message;
+            gs.error(message);
+        }
+
+    },
+
+    createUpdatePlaylist: function(item, channelSysID) {
+
+        var playlistGr = new GlideRecord('x_792082_ytt_playlist');
+        playlistGr.get('playlist_id', item.id);
+
+        playlistGr.setValue('playlist_id', item.id);
+        playlistGr.setValue('published', item.snippet.publishedAt);
+        playlistGr.setValue('channel', channelSysID);
+        playlistGr.setValue('title', item.snippet.title);
+        playlistGr.setValue('description', item.snippet.description);
+        playlistGr.setValue('video_count', item.contentDetails.itemCount);
+        playlistGr.update();
+
+    },
+
+    getVideos: function() {
+        var playGr = new GlideRecord('x_792082_ytt_playlist');
+        playGr.query();
+        while (playGr.next()) {
+            this.getVideoPerPlaylistID(
+                playGr.getValue('playlist_id'),
+                playGr.getUniqueValue()
+            );
+        }
+    },
+
+    getVideoPerPlaylistID: function(playlistId, playlistSysID, nextPageToken) {
+        try {
+            var r = new sn_ws.RESTMessageV2('x_792082_ytt.Youtube REST', 'Get Playlist Videos');
+            r.setStringParameterNoEscape('playlistId', playlistId);
+            if (nextPageToken) {
+                r.setStringParameterNoEscape('nextPageToken', nextPageToken);
+            }
+
+            var response = r.execute();
+            var responseBody = response.getBody();
+            var httpStatus = response.getStatusCode();
+
+            if (httpStatus == 200) {
+                var itemsArr = JSON.parse(responseBody).items;
+                itemsArr.forEach(function(item) {
+                    this.createUpdateVideo(item, playlistSysID);
+                }, this);
+
+                if (JSON.parse(responseBody).nextPageToken) {
+                    this.getVideoPerPlaylistID(
+                        playlistId,
+                        playlistSysID,
+                        JSON.parse(responseBody).nextPageToken
+                    );
+                }
+
+            } else {
+                gs.error('oops');
+            }
+        } catch (ex) {
+            var message = ex.message;
+            gs.error(message);
+        }
+    },
+
+    createUpdateVideo: function(item, playlistSysID) {
+        var videoGr = new GlideRecord('x_792082_ytt_video');
+        videoGr.get('video_id', item.snippet.resourceId.videoId);
+
+        videoGr.setValue('video_id', item.snippet.resourceId.videoId);
+        videoGr.setValue('published', item.snippet.publishedAt);
+        videoGr.setValue('playlist', playlistSysID);
+        videoGr.setValue('title', item.snippet.title);
+        videoGr.setValue('description', item.snippet.description);
+        videoGr.setValue('playlist_item_id', item.id);
+        videoGr.update();
+    },
+
+    generateTranscripts: function() {
+        gs.eventQueue('x_792082_ytt.generate.video.transcript', null, 1, 0);
+    },
+
+    getTranscriptPerVideoID: function(videoID) {
+
+        if (videoID) {
+            var url = this.getTranscriptURL(videoID);
+
+            if (url && url != 'error') {
+
+                var rawTranscript = this.getTranscriptText(url);
+
+                if (rawTranscript) {
+
+                    var processedTranscript = this.getProcessedTranscript(rawTranscript) + '';
+
+                    if (processedTranscript == '') {
+
+                        gs.error('YTT [YttUtils.getTranscriptPerVideoID] Error in processing Video ID ' + videoID);
+                        return this.ERROR_MSG;
+
+                    } else {
+                        return processedTranscript;
+                    }
+                } else {
+                    return this.ERROR_MSG;
+                }
+            } else {
+                return this.ERROR_MSG;
+            }
+        }
+    },
+
+    getTranscriptURL: function(videoID) {
+        try {
+            var r = new sn_ws.RESTMessageV2('x_792082_ytt.Youtube REST', 'Get TimedText');
+            r.setStringParameterNoEscape('videoID', videoID);
+
+            var response = r.execute();
+            var responseBody = response.getBody();
+
+            var pattern = /{"captionTracks":\[{"baseUrl":"(.*)","name"/;
+            var result = responseBody.match(pattern);
+            var url = result[1].replaceAll('\\u0026', '&');
+
+            return url + '';
+        } catch (e) {
+            return 'error';
+        }
+    },
+
+    getTranscriptText: function(url) {
+
+        try {
+            var r = new sn_ws.RESTMessageV2('x_792082_ytt.Youtube REST', 'Get Transcript');
+            r.setStringParameterNoEscape('url', url);
+
+            var response = r.execute();
+            var responseBody = response.getBody();
+            var httpStatus = response.getStatusCode();
+
+            var xmlDoc = new XMLDocument2();
+            xmlDoc.parseXML(responseBody);
+            var node = xmlDoc.getFirstNode('/transcript');
+            var nodeItr = node.getChildNodeIterator();
+            var transArr = [];
+            while (nodeItr.hasNext()) {
+                var nodeCur = nodeItr.next();
+                var nodeText = nodeCur.getTextContent();
+                var reg = /&#(\d+);/g;
+                if (reg.test(nodeText)) {
+                    var locs = nodeText.match(reg);
+                    locs.forEach(function(item) {
+                        var charVal = item.match(/&#(\d+);/)[1];
+                        nodeText = nodeText.replace(item, String.fromCharCode(charVal));
+                    });
+                } else {
+                    //Do nothing... nodeText remains as-is
+                }
+
+                if (!gs.nil(nodeText)) {
+                    transArr.push(nodeText);
+                }
+            }
+
+            if (transArr.length == 0) {
+                return '';
+            } else {
+                return transArr.join(' ');
+            }
+        } catch (e) {
+            return '';
+        }
+    },
+
+    getProcessedTranscript: function(rawTranscript) {
+        var bodyObj = '';
+
+        try {
+            var r = new sn_ws.RESTMessageV2('x_792082_ytt.ChatGPT REST', 'Fetch processed transcript');
+            r.setStringParameterNoEscape('bearer-token', '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');
+            r.setStringParameterNoEscape('rawTranscript', rawTranscript);
+
+            var response = r.execute();
+            var responseBody = response.getBody();
+            var httpStatus = response.getStatusCode();
+
+            bodyObj = ((JSON.parse(responseBody)).choices[0].text).trim();
+        } catch (e) {
+            bodyObj = '';
+            gs.error(responseBody);
+        }
+
+        return bodyObj + '';
+    },
+
+    type: 'YttUtils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-10 10:36:06</sys_created_on>
+        <sys_id>12c088339734691056e8b3e6f053af60</sys_id>
+        <sys_mod_count>59</sys_mod_count>
+        <sys_name>YttUtils</sys_name>
+        <sys_package display_value="YouTube Transcripts" source="x_792082_ytt">f021ce8f977ca51056e8b3e6f053af74</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="YouTube Transcripts">f021ce8f977ca51056e8b3e6f053af74</sys_scope>
+        <sys_update_name>sys_script_include_12c088339734691056e8b3e6f053af60</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-15 06:53:45</sys_updated_on>
+    </sys_script_include>
+</record_update>

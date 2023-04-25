@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_app">
+    <sys_app action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <can_edit_in_studio>true</can_edit_in_studio>
+        <enforce_license>log</enforce_license>
+        <guided_setup_guid/>
+        <hide_on_ui>false</hide_on_ui>
+        <installed_as_dependency>false</installed_as_dependency>
+        <js_level>es_latest</js_level>
+        <licensable>true</licensable>
+        <license/>
+        <license_category>none</license_category>
+        <license_definition/>
+        <license_model>none</license_model>
+        <logo>f921820b977ca51056e8b3e6f053afb2</logo>
+        <menu/>
+        <name>YouTube Transcripts</name>
+        <private>false</private>
+        <restrict_table_access>false</restrict_table_access>
+        <runtime_access_tracking>permissive</runtime_access_tracking>
+        <scope>x_792082_ytt</scope>
+        <scoped_administration>false</scoped_administration>
+        <short_description>YouTube Transcripts</short_description>
+        <source>x_792082_ytt</source>
+        <store_correlation_id/>
+        <store_url/>
+        <sys_class_name>sys_app</sys_class_name>
+        <sys_code/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-08 11:58:27</sys_created_on>
+        <sys_id>f021ce8f977ca51056e8b3e6f053af74</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-08 11:58:31</sys_updated_on>
+        <template/>
+        <trackable>true</trackable>
+        <uninstall_blocked>false</uninstall_blocked>
+        <user_role/>
+        <vendor/>
+        <vendor_prefix/>
+        <version>1.0.0</version>
+    </sys_app>
+    <sys_translated_text action="delete_multiple" query="documentkey=f021ce8f977ca51056e8b3e6f053af74"/>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color/>
+        <chunk_size_bytes>700000</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/svg+xml</content_type>
+        <encryption_context/>
+        <file_name>logo-youtube.svg</file_name>
+        <hash>20be5d0b31fc4a59b6774aebe57a1228caecaf5b2e48f3a12bba0d7a7705eab5</hash>
+        <image_height/>
+        <image_width/>
+        <size_bytes>555</size_bytes>
+        <size_compressed>354</size_compressed>
+        <state>available</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-08 11:58:31</sys_created_on>
+        <sys_id>f921820b977ca51056e8b3e6f053afb2</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2023-02-08 11:58:31</sys_updated_on>
+        <table_name>sys_app</table_name>
+        <table_sys_id>f021ce8f977ca51056e8b3e6f053af74</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAAAA==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="logo-youtube.svg" sys_id="f921820b977ca51056e8b3e6f053afb2">f921820b977ca51056e8b3e6f053afb2</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-08 11:58:31</sys_created_on>
+        <sys_id>3d21820b977ca51056e8b3e6f053afb2</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>bVLBcoMgEL3nKxh6hZUFUczEHJpzT/kCY9U4seqojUm/votx0namF3aB9/a9XdiN14rdPpp2TPl5mvptEMzzDLOBbqgCrZQKCMEfkO2tqdvLf0BMkiRYbgmactXfOLuv8VoX82vnT5liaB1DVJwVbXZqCnnK8ks1dJ/te8rbYmZ/MCS6HfssL1LeD8VYDNeC7ze7PpvOrKybJuUvpSIccd/QhhAKjMHmEsHJCGIZA0rUEg0kfnEH1A60UGBFnPwKowwdGKlAy0hBJMwmJ74Tvg7xjIjpFi2gwPCghE4gJpoR1q7hqITzmccmmiwQU5AD4bwnTZorO6fNA/YQWsPo9amWXvaS9CMv7S0Y6oHkieubCHPjrWgq5hND7T6TI9qYJBd3P9P44oEfWdfcq659Tq0sOeu7up3o2SMaDw0CNENlyIK1bDkyChxb2P4L7DffnE/S2ysCAAA=</data>
+        <length>460</length>
+        <position>1</position>
+        <sys_attachment display_value="logo-youtube.svg" sys_id="f921820b977ca51056e8b3e6f053afb2">f921820b977ca51056e8b3e6f053afb2</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-08 11:58:31</sys_created_on>
+        <sys_id>bd21820b977ca51056e8b3e6f053afb2</sys_id>
+    </sys_attachment_doc>
+</record_update>

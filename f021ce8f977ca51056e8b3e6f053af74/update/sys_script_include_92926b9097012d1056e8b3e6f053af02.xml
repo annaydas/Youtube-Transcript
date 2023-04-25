@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_792082_ytt.OAuthUtil_ytt</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>//* Dont edit this script include. Best practise: Extend this script include and override the functions like shown in sample code. &#13;
+// Use the Script include to add or update headers, query parameters, endpoint URLs in oauth flow.&#13;
+//* sample script below&#13;
+//*&#13;
+	var OAuthCustomUtil = Class.create();&#13;
+	OAuthCustomUtil.prototype = Object.extendsObject(OAuthUtil, {&#13;
+&#13;
+	preprocessAuthCode: function(requestParamMap) {&#13;
+		this.oauthContext.setAuthorizationEndpoint("https://accounts.google.com/o/oauth2/v2/auth");&#13;
+		this.oauthContext.addHeader("Content-Type","application/json");&#13;
+		var profGr = this.oauthContext.getOAuthProfile();&#13;
+		gs.info(profGr.getValue('name'));&#13;
+	},&#13;
+	&#13;
+	preprocessAccessToken: function(requestParamMap) {&#13;
+		this.oauthContext.addHeader("Content-Type","application/json");&#13;
+		this.oauthContext.addQueryParameter("name","jackson");&#13;
+		gs.info(this.oauthContext.getQueryParameter("name"));&#13;
+		gs.info(this.oauthContext.getHeader("Content-Type"));&#13;
+		this.oauthContext.setTokenEndpoint("https://oauth2.googleapis.com/token");&#13;
+		var profGr = this.oauthContext.getOAuthProfile();&#13;
+		gs.info(profGr.getValue('grant_type'));&#13;
+	},&#13;
+	&#13;
+	type: 'OAuthCustomUtil'&#13;
+}); &#13;
+ </description>
+        <name>OAuthUtil_ytt</name>
+        <script><![CDATA[//* Dont edit this script include. Best practise: Extend this script include and override the functions. 
+var OAuthUtil_ytt = Class.create();
+OAuthUtil_ytt.prototype = {
+    initialize: function(oauthContext) {
+        this.oauthContext = oauthContext;
+    },
+
+    interceptRequestParameters: function(requestParamMap) {
+        // Add/Modify request parameters if needed
+        this.preprocessAccessToken(requestParamMap);
+    },
+
+    parseTokenResponse: function(accessTokenResponse) {
+        this.postprocessAccessToken(accessTokenResponse);
+    },
+
+    preprocessAuthCode: function(requestParamMap) {
+        requestParamMap.put('access_type', 'offline');
+        requestParamMap.put('response_type', 'code');
+		requestParamMap.put('prompt','consent');
+    },
+
+    preprocessAccessToken: function(requestParamMap) {},
+
+    postprocessAccessToken: function(accessTokenResponse) {
+        var contentType = accessTokenResponse.getContentType();
+        if (contentType && contentType.indexOf('application/json') != -1) {
+            var tokenResponse = (new global.JSON()).decode(accessTokenResponse.getBody());
+            var paramMap = accessTokenResponse.getparameters();
+            for (param in tokenResponse)
+                paramMap.put(param, tokenResponse[param].toString());
+        }
+    },
+
+    type: 'OAuthUtil_ytt'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-12 16:16:40</sys_created_on>
+        <sys_id>92926b9097012d1056e8b3e6f053af02</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>OAuthUtil_ytt</sys_name>
+        <sys_package display_value="YouTube Transcripts" source="x_792082_ytt">f021ce8f977ca51056e8b3e6f053af74</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="YouTube Transcripts">f021ce8f977ca51056e8b3e6f053af74</sys_scope>
+        <sys_update_name>sys_script_include_92926b9097012d1056e8b3e6f053af02</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-12 16:23:56</sys_updated_on>
+    </sys_script_include>
+</record_update>

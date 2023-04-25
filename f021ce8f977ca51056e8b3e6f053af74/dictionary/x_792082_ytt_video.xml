@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="9cc90ac797bca51056e8b3e6f053af82" label="Video" max_length="40" name="x_792082_ytt_video" text_index="true" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Description" mandatory="true" max_length="500" name="description" type="string"/>
+        <element label="Playlist" mandatory="true" max_length="32" name="playlist" reference="x_792082_ytt_playlist" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Playlist item ID" mandatory="true" max_length="100" name="playlist_item_id" type="string"/>
+        <element label="Published" mandatory="true" max_length="40" name="published" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" display="true" label="Title" mandatory="true" max_length="100" name="title" type="string"/>
+        <element label="Transcript" max_length="5000" name="transcript" type="string"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return 'https://www.youtube.com/watch?v=' + current.getValue('video_id');  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="URL" mandatory="true" max_length="1024" name="url" type="url" virtual="true"/>
+        <element attributes="edge_encryption_enabled=true" label="Video ID" mandatory="true" max_length="100" name="video_id" type="string"/>
+        <index name="index">
+            <element name="playlist"/>
+        </index>
+    </element>
+</database>

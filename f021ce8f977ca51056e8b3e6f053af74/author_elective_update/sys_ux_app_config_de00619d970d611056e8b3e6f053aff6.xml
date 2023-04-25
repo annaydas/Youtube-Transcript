@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_config">
+    <sys_ux_app_config action="DELETE">
+        <active>true</active>
+        <custom_icon/>
+        <default_route_type/>
+        <description/>
+        <encode_query_string>false</encode_query_string>
+        <icon display_value="youtube-fill">youtube_fill</icon>
+        <landing_path>home</landing_path>
+        <name>ytt</name>
+        <prefetch_limits/>
+        <sys_class_name>sys_ux_app_config</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-15 09:20:09</sys_created_on>
+        <sys_id>de00619d970d611056e8b3e6f053aff6</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>ytt</sys_name>
+        <sys_package display_value="YouTube Transcripts" source="x_792082_ytt">f021ce8f977ca51056e8b3e6f053af74</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="YouTube Transcripts">f021ce8f977ca51056e8b3e6f053af74</sys_scope>
+        <sys_update_name>sys_ux_app_config_de00619d970d611056e8b3e6f053aff6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-15 12:06:18</sys_updated_on>
+    </sys_ux_app_config>
+    <sys_translated_text action="DELETE" query="documentkey=de00619d970d611056e8b3e6f053aff6"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="YouTube Transcripts">f021ce8f977ca51056e8b3e6f053af74</application>
+        <file_path/>
+        <instance_id>137bbb49db5595180ae3ac44d49619de</instance_id>
+        <instance_name>dev131733</instance_name>
+        <name>sys_ux_app_config_de00619d970d611056e8b3e6f053aff6</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_config"><sys_ux_app_config action="INSERT_OR_UPDATE"><active>true</active><custom_icon/><default_route_type/><description/><encode_query_string>false</encode_query_string><icon display_value="youtube-fill">youtube_fill</icon><landing_path>home</landing_path><name>ytt</name><prefetch_limits/><sys_class_name>sys_ux_app_config</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-02-15 09:20:09</sys_created_on><sys_id>de00619d970d611056e8b3e6f053aff6</sys_id><sys_mod_count>1</sys_mod_count><sys_name>ytt</sys_name><sys_package display_value="YouTube Transcripts" source="x_792082_ytt">f021ce8f977ca51056e8b3e6f053af74</sys_package><sys_policy/><sys_scope display_value="YouTube Transcripts">f021ce8f977ca51056e8b3e6f053af74</sys_scope><sys_update_name>sys_ux_app_config_de00619d970d611056e8b3e6f053aff6</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-02-15 12:06:18</sys_updated_on></sys_ux_app_config><sys_translated_text action="delete_multiple" query="documentkey=de00619d970d611056e8b3e6f053aff6"/></record_update>]]></payload>
+        <payload_hash>832659108</payload_hash>
+        <record_name>ytt</record_name>
+        <reverted_from/>
+        <source>fc21ce8f977ca51056e8b3e6f053af75</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-15 12:06:18</sys_created_on>
+        <sys_id>00164a5597cd611056e8b3e6f053af54</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18654f7e71b0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-15 12:06:18</sys_updated_on>
+        <type>UX App Configuration</type>
+        <update_guid>08164a5505cd611006d511b7cc2f1e53</update_guid>
+        <update_guid_history>08164a5505cd611006d511b7cc2f1e53:832659108,5e00619d3e0d61105834209950ab9cf9:1349047460</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-15 12:13:57</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_app_config">sys_ux_app_config</sys_db_object>
+        <sys_id>2f161d20d9f64e588e65d96c1cf2bf21</sys_id>
+        <sys_metadata>de00619d970d611056e8b3e6f053aff6</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ytt</sys_name>
+        <sys_package display_value="YouTube Transcripts" source="x_792082_ytt">f021ce8f977ca51056e8b3e6f053af74</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="YouTube Transcripts">f021ce8f977ca51056e8b3e6f053af74</sys_scope>
+        <sys_scope_delete display_value="">2d89f46aa3b54d91a12f718f79c09a89</sys_scope_delete>
+        <sys_update_name>sys_ux_app_config_de00619d970d611056e8b3e6f053aff6</sys_update_name>
+        <sys_update_version display_value="sys_ux_app_config_de00619d970d611056e8b3e6f053aff6">00164a5597cd611056e8b3e6f053af54</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-15 12:13:57</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

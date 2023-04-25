@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="5dc24e0397bca51056e8b3e6f053af7d" label="Channel" max_length="40" name="x_792082_ytt_channel" type="collection">
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="Channel ID" mandatory="true" max_length="100" name="channel_id" type="string"/>
+        <element attributes="edge_encryption_enabled=true" display="true" label="Channel Name" mandatory="true" max_length="100" name="channel_name" type="string"/>
+    </element>
+</database>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_view">
+    <sys_ui_view action="INSERT_OR_UPDATE">
+        <group/>
+        <hidden>false</hidden>
+        <name>ytt</name>
+        <roles/>
+        <sys_class_name>sys_ui_view</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-12 16:47:02</sys_created_on>
+        <sys_id>4f89ef1897012d1056e8b3e6f053afb6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>YTT</sys_name>
+        <sys_package display_value="YouTube Transcripts" source="x_792082_ytt">f021ce8f977ca51056e8b3e6f053af74</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="YouTube Transcripts">f021ce8f977ca51056e8b3e6f053af74</sys_scope>
+        <sys_update_name>sys_ui_view_4f89ef1897012d1056e8b3e6f053afb6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-12 16:47:02</sys_updated_on>
+        <title>YTT</title>
+        <user/>
+    </sys_ui_view>
+</record_update>

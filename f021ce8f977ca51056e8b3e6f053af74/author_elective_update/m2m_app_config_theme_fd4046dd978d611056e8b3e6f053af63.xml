@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="m2m_app_config_theme">
+    <m2m_app_config_theme action="DELETE">
+        <applicability/>
+        <order>0</order>
+        <sys_class_name>m2m_app_config_theme</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-15 11:41:01</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>fd4046dd978d611056e8b3e6f053af63</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="YouTube Transcripts" source="x_792082_ytt">f021ce8f977ca51056e8b3e6f053af74</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="YouTube Transcripts">f021ce8f977ca51056e8b3e6f053af74</sys_scope>
+        <sys_update_name>m2m_app_config_theme_fd4046dd978d611056e8b3e6f053af63</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-15 12:05:40</sys_updated_on>
+        <theme display_value="Polaris">31bf91ae07203010e03948f78ad30095</theme>
+        <ux_app_configuration display_value="ytt">de00619d970d611056e8b3e6f053aff6</ux_app_configuration>
+    </m2m_app_config_theme>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="YouTube Transcripts">f021ce8f977ca51056e8b3e6f053af74</application>
+        <file_path/>
+        <instance_id>137bbb49db5595180ae3ac44d49619de</instance_id>
+        <instance_name>dev131733</instance_name>
+        <name>m2m_app_config_theme_fd4046dd978d611056e8b3e6f053af63</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="m2m_app_config_theme"><m2m_app_config_theme action="INSERT_OR_UPDATE"><applicability/><order>0</order><sys_class_name>m2m_app_config_theme</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-02-15 11:41:01</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>fd4046dd978d611056e8b3e6f053af63</sys_id><sys_mod_count>3</sys_mod_count><sys_name/><sys_overrides/><sys_package display_value="YouTube Transcripts" source="x_792082_ytt">f021ce8f977ca51056e8b3e6f053af74</sys_package><sys_policy/><sys_scope display_value="YouTube Transcripts">f021ce8f977ca51056e8b3e6f053af74</sys_scope><sys_update_name>m2m_app_config_theme_fd4046dd978d611056e8b3e6f053af63</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-02-15 12:05:40</sys_updated_on><theme display_value="Polaris">31bf91ae07203010e03948f78ad30095</theme><ux_app_configuration display_value="ytt">de00619d970d611056e8b3e6f053aff6</ux_app_configuration></m2m_app_config_theme></record_update>]]></payload>
+        <payload_hash>-364381811</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>fc21ce8f977ca51056e8b3e6f053af75</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-15 12:05:40</sys_created_on>
+        <sys_id>0be58a1597cd611056e8b3e6f053af3a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18654f755a10000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-15 12:05:40</sys_updated_on>
+        <type>UX App Theme</type>
+        <update_guid>03e58a15ddcd61102d5059378ea23e3a</update_guid>
+        <update_guid_history>03e58a15ddcd61102d5059378ea23e3a:-364381811,7d7502557ccd61104ec5d99b137d46d8:-114586034,e4454a1503cd611026995ed5eb912ded:-2057167787,f94046dd1f8d6110c9a0a872cc973a65:964721580</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">08d70ad597cd611056e8b3e6f053af67</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-15 12:13:57</sys_created_on>
+        <sys_db_object display_value="" name="m2m_app_config_theme">m2m_app_config_theme</sys_db_object>
+        <sys_id>11840266feb444388ad466325357b640</sys_id>
+        <sys_metadata>fd4046dd978d611056e8b3e6f053af63</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="YouTube Transcripts" source="x_792082_ytt">f021ce8f977ca51056e8b3e6f053af74</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="YouTube Transcripts">f021ce8f977ca51056e8b3e6f053af74</sys_scope>
+        <sys_scope_delete display_value="">2d89f46aa3b54d91a12f718f79c09a89</sys_scope_delete>
+        <sys_update_name>m2m_app_config_theme_fd4046dd978d611056e8b3e6f053af63</sys_update_name>
+        <sys_update_version display_value="m2m_app_config_theme_fd4046dd978d611056e8b3e6f053af63">0be58a1597cd611056e8b3e6f053af3a</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-15 12:13:57</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

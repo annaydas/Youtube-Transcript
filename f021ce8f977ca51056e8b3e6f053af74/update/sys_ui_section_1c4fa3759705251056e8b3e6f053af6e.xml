@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="1c4fa3759705251056e8b3e6f053af6e" sys_domain="global" table="x_792082_ytt_video" version="3" view="workspace">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>playlist.channel</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-17 09:05:07</sys_created_on>
+            <sys_id>e5cf6f759705251056e8b3e6f053af9c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_792082_ytt_video" sys_domain="global" view="11739aa0f98211108c8bd16244dfe72b">1c4fa3759705251056e8b3e6f053af6e</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-17 09:05:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>title</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-17 09:05:07</sys_created_on>
+            <sys_id>e9cf6f759705251056e8b3e6f053af9c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_792082_ytt_video" sys_domain="global" view="11739aa0f98211108c8bd16244dfe72b">1c4fa3759705251056e8b3e6f053af6e</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-17 09:05:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-17 09:05:07</sys_created_on>
+            <sys_id>edcf6f759705251056e8b3e6f053af9c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_792082_ytt_video" sys_domain="global" view="11739aa0f98211108c8bd16244dfe72b">1c4fa3759705251056e8b3e6f053af6e</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-17 09:05:07</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>playlist</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-17 09:05:07</sys_created_on>
+            <sys_id>e1cf6f759705251056e8b3e6f053af9d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_792082_ytt_video" sys_domain="global" view="11739aa0f98211108c8bd16244dfe72b">1c4fa3759705251056e8b3e6f053af6e</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-17 09:05:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>published</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-17 09:05:07</sys_created_on>
+            <sys_id>e5cf6f759705251056e8b3e6f053af9d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_792082_ytt_video" sys_domain="global" view="11739aa0f98211108c8bd16244dfe72b">1c4fa3759705251056e8b3e6f053af6e</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-17 09:05:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-17 09:05:07</sys_created_on>
+            <sys_id>e9cf6f759705251056e8b3e6f053af9d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_792082_ytt_video" sys_domain="global" view="11739aa0f98211108c8bd16244dfe72b">1c4fa3759705251056e8b3e6f053af6e</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-17 09:05:07</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>url</element>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-17 09:05:07</sys_created_on>
+            <sys_id>edcf6f759705251056e8b3e6f053af9d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_792082_ytt_video" sys_domain="global" view="11739aa0f98211108c8bd16244dfe72b">1c4fa3759705251056e8b3e6f053af6e</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-17 09:05:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>description</element>
+            <position>7</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-17 09:05:07</sys_created_on>
+            <sys_id>e1cf6f759705251056e8b3e6f053af9e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_792082_ytt_video" sys_domain="global" view="11739aa0f98211108c8bd16244dfe72b">1c4fa3759705251056e8b3e6f053af6e</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-17 09:05:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>transcript</element>
+            <position>8</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-17 09:05:07</sys_created_on>
+            <sys_id>e5cf6f759705251056e8b3e6f053af9e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_792082_ytt_video" sys_domain="global" view="11739aa0f98211108c8bd16244dfe72b">1c4fa3759705251056e8b3e6f053af6e</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-17 09:05:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_792082_ytt_video</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2023-02-17 09:02:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1c4fa3759705251056e8b3e6f053af6e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_792082_ytt_video</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="YouTube Transcripts" source="x_792082_ytt">f021ce8f977ca51056e8b3e6f053af74</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="YouTube Transcripts">f021ce8f977ca51056e8b3e6f053af74</sys_scope>
+            <sys_update_name>sys_ui_section_1c4fa3759705251056e8b3e6f053af6e</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2023-02-17 09:02:51</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Workspace" name="workspace">11739aa0f98211108c8bd16244dfe72b</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

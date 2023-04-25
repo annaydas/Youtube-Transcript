@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="9136820797bca51056e8b3e6f053af2f" label="Playlist" max_length="40" name="x_792082_ytt_playlist" type="collection">
+        <element attributes="encode_utf8=false" label="Channel" max_length="32" name="channel" reference="x_792082_ytt_channel" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Description" max_length="500" name="description" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Playlist ID" max_length="100" name="playlist_id" type="string"/>
+        <element label="Published" max_length="40" name="published" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" display="true" label="Title" mandatory="true" max_length="100" name="title" type="string"/>
+        <element label="Video Count" max_length="40" name="video_count" type="integer"/>
+        <index name="index">
+            <element name="channel"/>
+        </index>
+    </element>
+</database>

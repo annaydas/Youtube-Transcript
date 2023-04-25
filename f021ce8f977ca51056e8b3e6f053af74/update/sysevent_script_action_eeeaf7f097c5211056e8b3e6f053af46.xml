@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_script_action">
+    <sysevent_script_action action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition_script/>
+        <description/>
+        <event_name>x_792082_ytt.generate.video.transcript</event_name>
+        <name>Generate YTT Transcripts</name>
+        <order>1000</order>
+        <script><![CDATA[/**
+ * Does the work on each loop.
+ * @param {Number} [limit=10] - The number of records to process per loop.
+ * @param {Number} [currentNumber=0] - The number of records that have been processed so far, by all previous loops.
+ */
+function eventWrapper(limit, currentNumber) {
+
+    var EVENT_NAME = 'x_792082_ytt.generate.video.transcript'; //todo: Update this to the name of the event you've created.
+    var TABLE_NAME = 'x_792082_ytt_video'; //todo: Update this to the name of the table containing the records you're processing
+    var QUERY = 'transcriptISEMPTY'; //todo: Put your query here
+
+    var grRec = new GlideRecord(TABLE_NAME);
+
+    //Set default values
+    limit = Number(limit) > 0 ? Number(limit) : 10; //Default: 10
+    currentNumber = currentNumber > 0 ? currentNumber : 0; //Default: 0
+
+    grRec.setLimit(limit);
+    grRec.addEncodedQuery(QUERY);
+    grRec.query();
+    if (!grRec.hasNext()) {
+        gs.info('YTT: [Generate YTT Transcripts] completed with ' + currentNumber +
+            ' total records processed.');
+        return; //No more records to process. Halt function, and loop.
+    }
+
+    while (grRec.next()) {
+        var transcript = '';
+
+        try {
+            transcript = new x_792082_ytt.YttUtils().getTranscriptPerVideoID(grRec.getValue('video_id'));
+            grRec.setValue('transcript', transcript);
+            grRec.update();
+            transcript = '';
+
+            currentNumber++;
+        } catch (e) {
+            gs.error('YTT: [Generate YTT Transcripts] Error in processing Video ID ' + grRec.getValue('video_id') +
+                '. Error: ' + e);
+        }
+
+    }
+
+    //Log a progress update
+    gs.info('YTT: [Generate YTT Transcripts] event wrapper processed ' + currentNumber +
+        ' records so far. Triggering the next loop.');
+
+    //Trigger the event again
+    gs.eventQueue(EVENT_NAME, grRec, limit, currentNumber);
+}
+
+eventWrapper(event.parm1, event.parm2);]]></script>
+        <synchronous>false</synchronous>
+        <sys_class_name>sysevent_script_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-14 07:21:31</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>eeeaf7f097c5211056e8b3e6f053af46</sys_id>
+        <sys_mod_count>27</sys_mod_count>
+        <sys_name>Generate YTT Transcripts</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="YouTube Transcripts" source="x_792082_ytt">f021ce8f977ca51056e8b3e6f053af74</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="YouTube Transcripts">f021ce8f977ca51056e8b3e6f053af74</sys_scope>
+        <sys_update_name>sysevent_script_action_eeeaf7f097c5211056e8b3e6f053af46</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-14 13:20:33</sys_updated_on>
+    </sysevent_script_action>
+</record_update>
