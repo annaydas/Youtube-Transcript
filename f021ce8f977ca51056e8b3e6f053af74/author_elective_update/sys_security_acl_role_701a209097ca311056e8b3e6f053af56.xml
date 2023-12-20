@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-10-18 16:04:24</sys_created_on>
+        <sys_id>701a209097ca311056e8b3e6f053af56</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_792082_ytt_video.snc_internal</sys_name>
+        <sys_package display_value="YouTube Transcripts" source="x_792082_ytt">f021ce8f977ca51056e8b3e6f053af74</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="YouTube Transcripts">f021ce8f977ca51056e8b3e6f053af74</sys_scope>
+        <sys_security_acl display_value="x_792082_ytt_video">8bc94ac797bca51056e8b3e6f053afc0</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_701a209097ca311056e8b3e6f053af56</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-10-18 16:04:24</sys_updated_on>
+        <sys_user_role display_value="snc_internal" name="snc_internal">7fcaa702933002009c8579b4f47ffbde</sys_user_role>
+        <transaction_id>ec1aac5c978a311056e8b3e6f053af47</transaction_id>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="YouTube Transcripts">f021ce8f977ca51056e8b3e6f053af74</application>
+        <file_path/>
+        <instance_id>137bbb49db5595180ae3ac44d49619de</instance_id>
+        <instance_name>dev131733</instance_name>
+        <name>sys_security_acl_role_701a209097ca311056e8b3e6f053af56</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-10-18 16:04:24</sys_created_on><sys_id>701a209097ca311056e8b3e6f053af56</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_792082_ytt_video.snc_internal</sys_name><sys_package display_value="YouTube Transcripts" source="x_792082_ytt">f021ce8f977ca51056e8b3e6f053af74</sys_package><sys_policy/><sys_scope display_value="YouTube Transcripts">f021ce8f977ca51056e8b3e6f053af74</sys_scope><sys_security_acl display_value="x_792082_ytt_video">8bc94ac797bca51056e8b3e6f053afc0</sys_security_acl><sys_update_name>sys_security_acl_role_701a209097ca311056e8b3e6f053af56</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-10-18 16:04:24</sys_updated_on><sys_user_role display_value="snc_internal" name="snc_internal">7fcaa702933002009c8579b4f47ffbde</sys_user_role><transaction_id>ec1aac5c978a311056e8b3e6f053af47</transaction_id></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>380755192</payload_hash>
+        <record_name>x_792082_ytt_video.snc_internal</record_name>
+        <reverted_from/>
+        <source>99acc3039733211056e8b3e6f053af72</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2023-07-07 20:36:43</sys_created_on>
+        <sys_id>c92aa85097ca311056e8b3e6f053af62</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>18932123b780000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>Access Roles</type>
+        <update_guid>892aa8509fca3110ba69b523a5eeb962</update_guid>
+        <update_guid_history>892aa8509fca3110ba69b523a5eeb962:380755192</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_792082_ytt_video.snc_internal">492aa85097ca311056e8b3e6f053af65</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-10-18 16:04:41</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>00c6425b5b5c455dbfc0b7f948252729</sys_id>
+        <sys_metadata>701a209097ca311056e8b3e6f053af56</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_792082_ytt_video.snc_internal</sys_name>
+        <sys_package display_value="YouTube Transcripts" source="x_792082_ytt">f021ce8f977ca51056e8b3e6f053af74</sys_package>
+        <sys_parent display_value="x_792082_ytt_video">8bc94ac797bca51056e8b3e6f053afc0</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="YouTube Transcripts">f021ce8f977ca51056e8b3e6f053af74</sys_scope>
+        <sys_scope_delete display_value="">2d89f46aa3b54d91a12f718f79c09a89</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_701a209097ca311056e8b3e6f053af56</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_701a209097ca311056e8b3e6f053af56">c92aa85097ca311056e8b3e6f053af62</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-10-18 16:04:41</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_alias">
+    <sys_alias action="DELETE">
+        <configuration_template/>
+        <connection_type>http_connection</connection_type>
+        <id>x_792082_ytt.Youtube_Key</id>
+        <multiple_connections>false</multiple_connections>
+        <name>Youtube Key</name>
+        <parent/>
+        <retry_policy display_value="Default HTTP Retry Policy">ef751ff07301330025d71afe2ff6a7f9</retry_policy>
+        <sys_class_name>sys_alias</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-21 13:12:52</sys_created_on>
+        <sys_id>904de1679784311056e8b3e6f053afd0</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_792082_ytt.Youtube_Key</sys_name>
+        <sys_package display_value="YouTube Transcripts" source="x_792082_ytt">f021ce8f977ca51056e8b3e6f053af74</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="YouTube Transcripts">f021ce8f977ca51056e8b3e6f053af74</sys_scope>
+        <sys_update_name>sys_alias_904de1679784311056e8b3e6f053afd0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-21 13:13:51</sys_updated_on>
+        <type>credential</type>
+    </sys_alias>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="YouTube Transcripts">f021ce8f977ca51056e8b3e6f053af74</application>
+        <file_path/>
+        <instance_id>137bbb49db5595180ae3ac44d49619de</instance_id>
+        <instance_name>dev131733</instance_name>
+        <name>sys_alias_904de1679784311056e8b3e6f053afd0</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_alias"><sys_alias action="INSERT_OR_UPDATE"><configuration_template/><connection_type>http_connection</connection_type><id>x_792082_ytt.Youtube_Key</id><multiple_connections>false</multiple_connections><name>Youtube Key</name><parent/><retry_policy display_value="Default HTTP Retry Policy">ef751ff07301330025d71afe2ff6a7f9</retry_policy><sys_class_name>sys_alias</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-07-21 13:12:52</sys_created_on><sys_id>904de1679784311056e8b3e6f053afd0</sys_id><sys_mod_count>1</sys_mod_count><sys_name>x_792082_ytt.Youtube_Key</sys_name><sys_package display_value="YouTube Transcripts" source="x_792082_ytt">f021ce8f977ca51056e8b3e6f053af74</sys_package><sys_policy/><sys_scope display_value="YouTube Transcripts">f021ce8f977ca51056e8b3e6f053af74</sys_scope><sys_update_name>sys_alias_904de1679784311056e8b3e6f053afd0</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-07-21 13:13:51</sys_updated_on><type>credential</type></sys_alias></record_update>]]></payload>
+        <payload_hash>-1982998854</payload_hash>
+        <record_name>x_792082_ytt.Youtube_Key</record_name>
+        <reverted_from/>
+        <source>10290caf97de691056e8b3e6f053af97</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-21 13:13:51</sys_created_on>
+        <sys_id>ee8da1279784311056e8b3e6f053afe9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1897895d0250000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-21 13:13:51</sys_updated_on>
+        <type>Connection &amp; Credential Aliases</type>
+        <update_guid>268da1271e8431106f0c96a70840e7e9</update_guid>
+        <update_guid_history>268da1271e8431106f0c96a70840e7e9:-1982998854,485de5274f843110d70f655f887dd753:-676578605</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-21 13:17:20</sys_created_on>
+        <sys_db_object display_value="" name="sys_alias">sys_alias</sys_db_object>
+        <sys_id>656ff0a7e8074d5bb4d958d1b83e1089</sys_id>
+        <sys_metadata>904de1679784311056e8b3e6f053afd0</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_792082_ytt.Youtube_Key</sys_name>
+        <sys_package display_value="YouTube Transcripts" source="x_792082_ytt">f021ce8f977ca51056e8b3e6f053af74</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="YouTube Transcripts">f021ce8f977ca51056e8b3e6f053af74</sys_scope>
+        <sys_scope_delete display_value="">2d89f46aa3b54d91a12f718f79c09a89</sys_scope_delete>
+        <sys_update_name>sys_alias_904de1679784311056e8b3e6f053afd0</sys_update_name>
+        <sys_update_version display_value="sys_alias_904de1679784311056e8b3e6f053afd0">ee8da1279784311056e8b3e6f053afe9</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-21 13:17:20</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
